@@ -2,13 +2,15 @@ import React from "react";
 import { Context as TodoContext } from "../../context/TodoContext";
 import {CiEdit} from "react-icons/ci";
 import {AiFillDelete} from "react-icons/ai";
-import DeleteModal from "../Modal";
+// import DeleteModal from "../Modal";
 const Card = () => {
     const {
       filtered,
       checkboxRef,
       handleCheckbox,
       handleEdit,
+      setId,
+      // handleDelete,
       toggle
     } = React.useContext(TodoContext);
     return (
@@ -46,9 +48,7 @@ const Card = () => {
                   className="btn btn-danger"
                   type="button"
                   onClick={() => {
-                    toggle(
-                      <DeleteModal itemId= {item.id}/>
-                    )
+                    toggle(setId(item.id))
                   }}
                 >
                   <AiFillDelete />

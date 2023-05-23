@@ -3,6 +3,7 @@ import { Context as TodoContext } from "../../context/TodoContext";
 import { Context as ModeContext } from "../../context/Mode";
 import { MdOutlineLightMode } from "react-icons/md";
 import Card from "../TodoCard";
+import DeleteModal from "../Modal";
 import "./todo.scss";
 const Todo = () => {
 
@@ -70,6 +71,7 @@ const Todo = () => {
               <h1 className="text-center">Todo List</h1>
               <ul className="list-group">
                 <Card />
+                <DeleteModal />
               </ul>
             </div>
           </div>

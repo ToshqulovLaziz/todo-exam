@@ -6,6 +6,7 @@ const Context = React.createContext(null);
 const Provider = ({ children }) => {
     const [todos,setTodos] = React.useState([]);
     const [filtered,setFiltered] = React.useState([]);
+    const [id, setId] = React.useState(null);
     const [selectedItem, setSelectedItem] = React.useState({});
     const todoRef = React.useRef(null);
     const checkboxRef = React.useRef(true);
@@ -79,6 +80,8 @@ const Provider = ({ children }) => {
         modal,
         setModal,
         toggle,
+        id,
+        setId
       }}
     >
       {children}
